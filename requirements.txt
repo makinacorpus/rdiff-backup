@@ -1,0 +1,2 @@
+pylibacl==0.4.0
+pyxattr==0.5.2
