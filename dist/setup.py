@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys, os, getopt
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 version_string = "$version"
 
@@ -65,9 +65,9 @@ setup(name="rdiff-backup",
 	  author_email="rdiff-backup@emerose.org",
 	  url="http://rdiff-backup.nongnu.org/",
 	  packages = ['rdiff_backup'],
-	  ext_modules = [Extension("rdiff_backup.C", ["cmodule.c"]),
+	  ext_modules = [Extension("rdiff_backup.C", ["rdiff_backup/cmodule.c"]),
 					 Extension("rdiff_backup._librsync",
-							   ["_librsyncmodule.c"],
+							   ["rdiff_backup/_librsyncmodule.c"],
 							   include_dirs=incdir_list,
 							   library_dirs=libdir_list,
 							   libraries=libname,

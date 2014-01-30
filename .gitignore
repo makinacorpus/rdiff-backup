@@ -1,2 +1,6 @@
 venv
+build/
+rdiff_backup.egg-info/
+rdiff_backup/C.so
+rdiff_backup/_librsync.so
 *pyc
